@@ -1,6 +1,3 @@
-//read in an arabic numeral
-//let arabicNum = prompt("Enter an arabic numeral");
-
 function evaluateArabicNum(arabicNum) {
     //starter place for roman numeral
     let romanNum = '';
@@ -71,29 +68,4 @@ function evaluateArabicNum(arabicNum) {
         }
     }
     return romanNum;
-
-
-
-
-
-
-    //this separates the arabic number into values easier to parse into a roman numeral
-    /*let mDigit = arabicNum-(arabicNum % 1000);
-    let cDigit = arabicNum%1000;
-    //let dDigit 
-    //let lDigit = 
-    let xDigit = arabicNum%100;
-    //let vDigit
-    let iDigit = arabicNum%10;
-    alert(mDigit);
-    alert(cDigit);
-    alert(xDigit);
-    alert(iDigit);*/
-}
-
-try {
-    alert(evaluateArabicNum(1991));
-    alert(evaluateArabicNum(1544));
-} catch (error) {
-    alert(error);
 }
