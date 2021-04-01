@@ -1,0 +1,5 @@
+Add comments
+add errors
+change alpha to arabic
+
+ensure that subtraction is only two deep for romanto alpha

@@ -8,3 +8,9 @@ Evaluate chars:
     II
     IV
     VI
+
+
+I could use these to test eachother. They should be inverses
+
+
+AlphaToRoman
