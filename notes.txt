@@ -1,0 +1,16 @@
+RomanToAlpha
+1)Read in number
+2)Parse into array of chars
+3)Evaluate chars
+
+Evaluate chars:
+    Examples to start:
+    II
+    IV
+    VI
+
+
+I could use these to test eachother. They should be inverses
+
+
+AlphaToRoman
