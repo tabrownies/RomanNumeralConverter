@@ -1,7 +1,7 @@
 //read in roman numeral, eventually replace this with an HTML5 interface
 //let romanNumString = prompt("Enter a roman numeral");
 //a function to evalutate the string
-function evalutateRomanNum(romanNumString) {
+function evaluateRomanNum(romanNumString) {
     //I'll start with a basic aproach
     let sum = 0;
     //change to uppercase
@@ -82,7 +82,7 @@ function canPrecede(firstRomanChar, secondRomanChar) {
 //alert(convertRomanCharToValue('I'));
 try {
     //alert(evalutateRomanNum('lc'));
-    alert(canPrecede("C", "M"));
+    //alert(canPrecede("C", "M"));
 } catch (error) {
     alert(error);
 }

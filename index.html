@@ -1,8 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="alphaToRoman.js">
-        </script>
-        <script src="romanToAlpha.js"></script>
-    </head>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="arabicToRoman.js" type="text/javascript"></script>
+    <script src="romanToArabic.js" type="text/javascript"></script>
+    <script src="front-end.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Arabic to Roman Numeral Converter
+        </h1>
+        <input id="arabic" type="text" placeholder="Arabic Numeral">
+        <button onclick="convertFromRomanToArabic()">Convert to Arabic Numeral</button>
+        <button onclick="convertFromArabicToRoman()">Convert to Roman Numeral</button>
+        <input id="roman" type="text" placeholder="Roman Numeral">
+        <h4>
+            ERROR: <span id="error"></span>
+        </h4>
+    </div>
+    <div class="instructions">
+        <h2>
+            Instructions
+        </h2>
+        <ol>
+            <li>
+                Enter either an arabic or roman numeral.
+            </li>
+            <li>
+                Click <em>Convert to Arabic Numeral</em> to convert a roman numeral into an arabic numeral or click <em>Convert to Roman Numeral</em> to perform the opposite action.
+            </li>
+        </ol>
+    </div>
+    
+</body>
+
 </html>
