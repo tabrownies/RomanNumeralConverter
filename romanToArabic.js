@@ -1,5 +1,50 @@
 //a function to evalutate the string
 function evaluateRomanNum(romanNumString) {
+    //sub functions
+    //This function converts a roman numeral segment (which I call characters, or char for short), such as I, V, etc. to its individual numeric equality
+    function convertRomanCharToValue(romanChar) {
+        let value = 0;
+        switch (romanChar) {
+            case 'I':
+                value = 1;
+                break;
+            case 'V':
+                value = 5;
+                break;
+            case 'X':
+                value = 10;
+                break;
+            case 'L':
+                value = 50;
+                break;
+            case 'C':
+                value = 100;
+                break;
+            case 'D':
+                value = 500;
+                break;
+            case 'M':
+                value = 1000;
+                break;
+            default:
+                throw "INVALID ROMAN NUMERAL";
+                break;
+        }
+        return value;
+    }
+    //this function returns whether one roman numeral character can precede the next
+    function canPrecede(firstRomanChar, secondRomanChar) {
+        //This returns true because if the first character has a larger value than the second, it can precede the second
+        if (convertRomanCharToValue(firstRomanChar) > convertRomanCharToValue(secondRomanChar)) {
+            return true;
+        }
+        //These return false because if, for example, V precedes X (VX) has the same value as V, which is ambiguous
+        if (firstRomanChar == 'V' || firstRomanChar == 'L' || firstRomanChar == 'D') {
+            return false;
+        }
+        return convertRomanCharToValue(firstRomanChar) * 10 > convertRomanCharToValue(secondRomanChar) / 10
+    }
+    //sub functions end
     //valid input checking is left to a seperate function
     //Starting value for what will be returned
     let sum = 0;
@@ -34,47 +79,4 @@ function evaluateRomanNum(romanNumString) {
 
     }
     return sum;
-}
-//This function converts a roman numeral segment (which I call characters, or char for short), such as I, V, etc. to its individual numeric equality
-function convertRomanCharToValue(romanChar) {
-    let value = 0;
-    switch (romanChar) {
-        case 'I':
-            value = 1;
-            break;
-        case 'V':
-            value = 5;
-            break;
-        case 'X':
-            value = 10;
-            break;
-        case 'L':
-            value = 50;
-            break;
-        case 'C':
-            value = 100;
-            break;
-        case 'D':
-            value = 500;
-            break;
-        case 'M':
-            value = 1000;
-            break;
-        default:
-            throw "INVALID ROMAN NUMERAL";
-            break;
-    }
-    return value;
-}
-//this function returns whether one roman numeral character can precede the next
-function canPrecede(firstRomanChar, secondRomanChar) {
-    //This returns true because if the first character has a larger value than the second, it can precede the second
-    if (convertRomanCharToValue(firstRomanChar) > convertRomanCharToValue(secondRomanChar)) {
-        return true;
-    }
-    //These return false because if, for example, V precedes X (VX) has the same value as V, which is ambiguous
-    if (firstRomanChar == 'V' || firstRomanChar == 'L' || firstRomanChar == 'D') {
-        return false;
-    }
-    return convertRomanCharToValue(firstRomanChar) * 10 > convertRomanCharToValue(secondRomanChar) / 10
 }
