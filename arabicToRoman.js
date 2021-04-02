@@ -1,4 +1,12 @@
 function evaluateArabicNum(arabicNum) {
+    //This throws an error for invalid input values, namely non numbers or floating point numbers
+    arabicNum = Number(arabicNum)
+    if(arabicNum!==parseFloat(arabicNum)){
+        throw "ENTER AN ARABIC NUMERAL";
+    }
+    if(arabicNum!==parseInt(arabicNum)){
+        throw "ENTER AN INTEGER VALUE";
+    }
     //starter place for roman numeral
     let romanNum = '';
     /*

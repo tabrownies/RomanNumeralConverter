@@ -1,3 +1,4 @@
+//two simple functions to take the value in one of the text-boxes and convert it into a value for the other
 function convertFromArabicToRoman(){
     try{
         document.getElementById("roman").value = evaluateArabicNum(document.getElementById("arabic").value);
