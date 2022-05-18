@@ -4,6 +4,9 @@
     margin:5px;
     padding: 5px;
 }
+body{
+    background-color: rgb(255, 160, 160);
+}
 .container{
     display: flex;
     flex-direction: column;
